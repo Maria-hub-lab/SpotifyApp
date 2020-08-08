@@ -108,7 +108,9 @@ while True:
             searchSong = input("Which song to you want to hear?: ")
             for item in trackResults:
                 if searchSong in item['name']:
-                    trackSelectionList.append(trackURIs[int(searchSong)])
+                    searchSong = int(z) 
+                    break
+            trackSelectionList.append(trackURIs[int(searchSong)])
             spotifyObject.start_playback(deviceID, None, trackSelectionList)
             webbrowser.open(trackArt[int(searchSong)])                   
             
