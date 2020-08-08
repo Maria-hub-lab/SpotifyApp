@@ -105,10 +105,13 @@ while True:
         while True:
             # Search for song in trackResults
             searchSong = input("Which song to you want to hear?: ")
+            for item in trackResults:
+                if item['name'].includes(searchSong):
+                    searchSong = item['uri']
             if searchSong == "x":
                 break
             trackSelectionList = []
-            trackSelectionList.append(trackURIs[searchSong])
+            trackSelectionList.append(trackURIs[int(searchSong)])
             
             songSelection = input("Enter a song number to see the album art: ")
             if songSelection == "x":
