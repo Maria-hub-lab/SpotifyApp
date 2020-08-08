@@ -5,7 +5,6 @@ import json
 import spotipy
 import webbrowser
 import spotipy.util as util
-#from json.decoder import JSONDecodeError
 import json.decoder
 
 # Get the username from terminal
@@ -60,7 +59,7 @@ while True:
     choice = input("Enter your choice: ")
     
     # Search for artist
-    if choice == "0":
+    if choice == 0:
         print()
         searchQuery = input("Ok, what's their name?:")
         print()
@@ -113,5 +112,5 @@ while True:
             webbrowser.open(trackArt[int(songSelection)])
         
     # End program
-    if choice == "1":
+    if choice == 1:
         break
