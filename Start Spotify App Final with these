@@ -1,0 +1,3 @@
+export SPOTIPY_CLIENT_ID='bfa0f831f2224d2b988ff0807a7cc304'
+export SPOTIPY_CLIENT_SECRET='7506bc6293b943b7963b255dd40f3f4b'
+export SPOTIPY_REDIRECT_URI='https://www.google.de/'
