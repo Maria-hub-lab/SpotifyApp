@@ -103,10 +103,25 @@ while True:
             
         # See album art
         while True:
+            # Search for song in trackResults
+            trackSelectionList = []
+            searchSong = input("Which song to you want to hear?: ")
+            for item in trackResults:
+                if searchSong in item['name']:
+                    searchSong = int(z) 
+                    break
+            trackSelectionList.append(trackURIs[int(searchSong)])
+            spotifyObject.start_playback(deviceID, None, trackSelectionList)
+            webbrowser.open(trackArt[int(searchSong)])                   
+            
+            if searchSong == "x":
+                break
+                     
+         
             songSelection = input("Enter a song number to see the album art: ")
             if songSelection == "x":
                 break
-            trackSelectionList = []
+            
             trackSelectionList.append(trackURIs[int(songSelection)])
             spotifyObject.start_playback(deviceID, None, trackSelectionList)
             webbrowser.open(trackArt[int(songSelection)])
